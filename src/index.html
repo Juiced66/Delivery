@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Quick Test Page</title>
+</head>
+<body>
+    <div class="container">
+
+            <div class="form row"> <!-- Saisie info utilisateur -->
+                <div class="col">
+                <h3>Informations client </h3>
+                
+                    <div class="identite">
+
+                        <h5>Identite</h5>
+                        <div class="mb-3">
+                            <label for="nom">Nom</label>
+                            <input type="text" id="nom">
+                        </div>
+                        <div class="mb-3">
+                            <label for="prenom">Prenom</label>
+                            <input type="text" id="prenom">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form row">
+                <div class="adresse col">
+                    <div class="mb-3">
+                        <label for="numeroVoie">Numéro</label>
+                        <input type="number" id="numeroVoie">
+                    </div>
+                    <div class="mb-3">
+                        <label for="typeVoie">Type de voie</label>
+                        <select id="typeVoie" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                            <option value="Rue">Rue</option>
+                            <option value="Av">Avenue</option>
+                            <option value="Bd">Boulevard</option>
+                            <option value="Ch">Chemin</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nomVoie">Voie</label>
+                        <input type="text" id="nomVoie">
+                    </div>
+                    <div class="mb-3">
+                        <label for="codePostal">Code postal </label>
+                        <input type="text" id="codePostal">
+                    </div>
+                    <div class="mb-3">
+                        <label for="ville">Ville</label>
+                        <input type="text" id="ville">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form"> <!-- Saisie info colis -->
+
+                <h3>Informations colis </h3>
+
+                <div class="radio">
+
+                    <h5>Type de colis</h5>
+                    <div class="mb-3">
+                        <input class="form-check-input" type="radio" name="typeColis" id="Restauration" checked>
+                        <label for="Restauration">Restauration</label>
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-check-input" type="radio" name="typeColis" id="ClickNCollect">
+                        <label for="ClickNCollect">ClickNCollect</label>
+                    </div>
+                    <!-- <input type="radio" name="typeColis" id="ColisCarton">
+                    <label for="ColisCarton"> Colis / Courrier </label> -->
+
+                </div>
+
+                <div class="adresse mb-3" >
+
+                    <h5>Adresse de retrait</h5>
+                    <div class="mb-3">
+                        <label for="numeroVoieColis">Numéro</label>
+                        <input type="number" id="numeroVoieColis">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="typeVoieColis">Type de voie</label>
+                        <select id="typeVoieColis" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                            <option value="Rue">Rue</option>
+                            <option value="Av">Avenue</option>
+                            <option value="Bd">Boulevard</option>
+                            <option value="Ch">Chemin</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nomVoieColis">Voie</label>
+                        <input type="text" id="nomVoieColis">
+                    </div>
+                    <div class="mb-3">
+                        <label for="codePostalColis">Code postal</label>
+                        <input type="text" id="codePostalColis">
+                    </div>
+                    <div class="mb-3">
+                        <label for="villeColis">Ville</label>
+                        <input type="text" id="villeColis">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="crenau">
+
+            <h3>Choix du créneau</h3>
+
+            <input type="datetime-local"  id="creneau">
+
+            </div>
+
+            <!-- <div class="form"> 
+
+                <h3>Informations destinataire </h3>
+                <div class="identite">
+
+                    <h5>Identite</h5>
+                    <label for="nomDestinataire">Nom</label>
+                    <input type="text" id="nomDestinataire">
+
+                    <label for="prenomDestinataire">Prenom</label>
+                    <input type="text" id="prenomDestinataire">
+                </div>
+                <div class="adresse">
+
+                    <h5>Adresse destinataire</h5>
+
+                    <label for="numeroVoieDestinataire">Numéro</label>
+                    <input type="number" step="1" id="numeroVoieDestinataire">
+
+                    <label for="typeVoieDestinataire">Type de voie</label>
+                    <select  id="typeVoieDestinataire">
+
+                        <option value="">--Please choose an option--</option>
+                        <option value="Rue">Rue</option>
+                        <option value="Av">Avenue</option>
+                        <option value="Bd">Boulevard</option>
+                        <option value="Ch">Chemin</option>
+
+                    </select>
+
+                    <label for="nomVoieDestinataire">Voie</label>
+                    <input type="text" id="nomVoieDestinataire">
+
+                    <label for="codePostalDestinataire">Code postal</label>
+                    <input type="text" id="codePostalDestinataire">
+
+                    <label for="ville">Ville</label>
+                    <input type="text" id="villeDestinataire">
+
+                    <label for="telephoneDestinataire">Telephone</label>
+                    <input type="tel" id="telephoneDestinataire">
+                </div>-->
+                <input id="commandeBtn" type="button" value=" Commande ! ">
+
+            <!-- </div>  -->
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
